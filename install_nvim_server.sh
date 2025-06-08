@@ -17,11 +17,21 @@ cd neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 
-# Download and install ccls
-cd 
-git clone --depth=1 --recursive https://github.com/MaskRay/ccls
-cd ccls
-cmake -S. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-xxx
-cmake --build Release
-cd Release 
-sudo make install 
+# Download and install clangd
+cd
+mkdir clangd
+cd clangd
+wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1.2.zip
+python3 -m zipfile -e clangd-linux-19.1.2.zip . # This is really the only way
+cd clangd_19.1.2/bin
+chmod +x clangd
+export PATH="$pwd:$PATH"
+
+
+# cd 
+# git clone --depth=1 --recursive https://github.com/MaskRay/ccls
+# cd ccls
+# cmake -S. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-xxx
+# cmake --build Release
+# cd Release 
+# sudo make install 
