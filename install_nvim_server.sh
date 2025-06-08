@@ -11,11 +11,19 @@ cd .config/nvim
 cp $gitdir/init.lua .
 
 # Download and install neovim 
-cd 
-git clone https://github.com/neovim/neovim
-cd neovim 
-make CMAKE_BUILD_TYPE=RelWithDebInfo
-sudo make install
+# cd 
+# git clone https://github.com/neovim/neovim
+# cd neovim 
+# make CMAKE_BUILD_TYPE=RelWithDebInfo
+# sudo make install
+
+cd
+mkdir nvim 
+cd nvim 
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz
+tar -xf nvim-linux-x86_64.tar.gz
+cd nvim-linux-x86_64/bin
+export PATH="$(pwd):$PATH"
 
 # Download and install clangd
 cd
@@ -25,7 +33,7 @@ wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1
 python3 -m zipfile -e clangd-linux-19.1.2.zip . # This is really the only way
 cd clangd_19.1.2/bin
 chmod +x clangd
-export PATH="$pwd:$PATH"
+export PATH="$(pwd):$PATH"
 
 
 # cd 
