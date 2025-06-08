@@ -98,7 +98,7 @@ require('lazy').setup({
       lspconfig.r_language_server.setup({ on_attach = on_attach })
 
       -- C/C++
-      lspconfig.clangd.setup({ 
+      lspconfig.ccls.setup({ 
 	on_attach = on_attach,
       })
 
