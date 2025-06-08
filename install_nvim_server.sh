@@ -10,13 +10,6 @@ cd .config/nvim
 # Copy the neovim config
 cp $gitdir/init.lua .
 
-# Download and install neovim 
-# cd 
-# git clone https://github.com/neovim/neovim
-# cd neovim 
-# make CMAKE_BUILD_TYPE=RelWithDebInfo
-# sudo make install
-
 cd
 mkdir nvim 
 cd nvim 
@@ -35,11 +28,5 @@ cd clangd_19.1.2/bin
 chmod +x clangd
 export PATH="$(pwd):$PATH"
 
-
-# cd 
-# git clone --depth=1 --recursive https://github.com/MaskRay/ccls
-# cd ccls
-# cmake -S. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-xxx
-# cmake --build Release
-# cd Release 
-# sudo make install 
+cd
+nvim --headless --listen 0.0.0.0:8888
