@@ -20,6 +20,7 @@ sudo make install
 # Download and install ccls
 cd 
 git clone --depth=1 --recursive https://github.com/MaskRay/ccls
+cd ccls
 cmake -S. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-xxx
 cmake --build Release
 cd Release 
