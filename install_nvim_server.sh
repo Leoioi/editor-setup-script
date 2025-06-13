@@ -28,5 +28,15 @@ cd clangd_19.1.2/bin
 chmod +x clangd
 export PATH="$(pwd):$PATH"
 
+# Download and install rust-analyzer
+cd
+mkdir rust_anl 
+cd rust_anl 
+wget https://github.com/rust-lang/rust-analyzer/releases/download/2025-06-09/rust-analyzer-x86_64-unknown-linux-gnu.gz
+gzip -d rust-analyzer-x86_64-unknown-linux-gnu.gz
+chmod +x rust-analyzer-x86_64-unknown-linux-gnu
+mv rust-analyzer-x86_64-unknown-linux-gnu rust-analyzer
+export PATH="$(pwd):$PATH"
+
 cd
 nvim --headless --listen 0.0.0.0:8888
