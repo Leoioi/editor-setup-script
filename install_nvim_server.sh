@@ -38,5 +38,8 @@ chmod +x rust-analyzer-x86_64-unknown-linux-gnu
 mv rust-analyzer-x86_64-unknown-linux-gnu rust-analyzer
 export PATH="$(pwd):$PATH"
 
+# install pyright
+pip install --break-system-packages pyright
+
 cd
 nvim --headless --listen 0.0.0.0:8888
