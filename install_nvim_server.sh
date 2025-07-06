@@ -43,8 +43,8 @@ wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1
 python3 -m zipfile -e clangd-linux-19.1.2.zip . # This is really the only way
 cd clangd_19.1.2/bin
 chmod +x clangd
-install clangd /usr/local/bin
-# export PATH="$(pwd):$PATH"
+# install clangd /usr/local/bin
+export PATH="$(pwd):$PATH"
 
 # Download and install rust-analyzer
 cd
@@ -54,8 +54,8 @@ wget https://github.com/rust-lang/rust-analyzer/releases/download/2025-06-09/rus
 gzip -d rust-analyzer-x86_64-unknown-linux-gnu.gz
 chmod +x rust-analyzer-x86_64-unknown-linux-gnu
 mv rust-analyzer-x86_64-unknown-linux-gnu rust-analyzer
-install rust-analyzer /usr/local/bin
-# export PATH="$(pwd):$PATH"
+# install rust-analyzer /usr/local/bin
+export PATH="$(pwd):$PATH"
 
 # install pyright
 pip install --break-system-packages pyright
@@ -65,8 +65,10 @@ cd
 mkdir ruff
 cd ruff
 wget https://github.com/astral-sh/ruff/releases/download/0.12.2/ruff-i686-unknown-linux-gnu.tar.gz
+tar -xf ruff-i686-unknown-linux-gnu.tar.gz
 cd ruff-i686-unknown-linux-gnu
-install rust-analyzer /usr/local/bin
+# install ruff /usr/local/bin
+export PATH="$(pwd):$PATH"
 
 
 cd
