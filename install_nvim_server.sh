@@ -10,6 +10,11 @@ cd .config/nvim
 # Copy the neovim config
 cp $gitdir/init.lua .
 
+
+mkdir -p ~/.config/helix
+cd ~/.config/helix
+cp $gitdir/config.toml .
+
 cd
 mkdir nvim 
 cd nvim 
@@ -17,6 +22,16 @@ wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_6
 tar -xf nvim-linux-x86_64.tar.gz
 cd nvim-linux-x86_64/bin
 export PATH="$(pwd):$PATH"
+
+
+# Install your editor of choose ;)
+cd
+mkdir helix
+cd helix
+wget https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64-linux.tar.xz
+tar -xf helix-25.01.1-x86_64-linux.tar.xz
+cd helix-25.01.1-x86_64-linux
+export PATH="$(pwd)$PATH"
 
 # Download and install clangd
 cd
