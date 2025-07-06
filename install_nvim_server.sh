@@ -31,7 +31,7 @@ cd helix
 wget https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64-linux.tar.xz
 tar -xf helix-25.01.1-x86_64-linux.tar.xz
 cd helix-25.01.1-x86_64-linux
-export PATH="$(pwd)$PATH"
+export PATH="$(pwd):$PATH"
 
 # Download and install clangd
 cd
