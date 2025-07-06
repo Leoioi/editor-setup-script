@@ -73,5 +73,9 @@ cd ruff-i686-unknown-linux-gnu
 export PATH="$(pwd):$PATH"
 
 
+# Add to the bachrc
+echo "source $PATH" >> ~/.bashrc
+
 cd
-nvim --headless --listen 0.0.0.0:8888
+# nvim --headless --listen 0.0.0.0:8888
+sleep infinity
