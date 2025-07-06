@@ -35,6 +35,7 @@ cd helix-25.01.1-x86_64-linux
 # install hx /usr/local/bin
 export PATH="$(pwd):$PATH"
 
+
 # Download and install clangd
 cd
 mkdir clangd
@@ -58,7 +59,8 @@ mv rust-analyzer-x86_64-unknown-linux-gnu rust-analyzer
 export PATH="$(pwd):$PATH"
 
 # install pyright
-pip install --break-system-packages pyright
+pip install --break-system-packages pyright python-lsp-server
+
 
 # install ruff (the better python lsp)
 cd
