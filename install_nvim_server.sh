@@ -21,7 +21,8 @@ cd nvim
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz
 tar -xf nvim-linux-x86_64.tar.gz
 cd nvim-linux-x86_64/bin
-export PATH="$(pwd):$PATH"
+install nvim /usr/local/bin
+#export PATH="$(pwd):$PATH"
 
 
 # Install your editor of choose ;)
@@ -31,7 +32,8 @@ cd helix
 wget https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64-linux.tar.xz
 tar -xf helix-25.01.1-x86_64-linux.tar.xz
 cd helix-25.01.1-x86_64-linux
-export PATH="$(pwd):$PATH"
+install hx /usr/local/bin
+# export PATH="$(pwd):$PATH"
 
 # Download and install clangd
 cd
@@ -41,7 +43,8 @@ wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1
 python3 -m zipfile -e clangd-linux-19.1.2.zip . # This is really the only way
 cd clangd_19.1.2/bin
 chmod +x clangd
-export PATH="$(pwd):$PATH"
+install clangd /usr/local/bin
+# export PATH="$(pwd):$PATH"
 
 # Download and install rust-analyzer
 cd
@@ -51,7 +54,8 @@ wget https://github.com/rust-lang/rust-analyzer/releases/download/2025-06-09/rus
 gzip -d rust-analyzer-x86_64-unknown-linux-gnu.gz
 chmod +x rust-analyzer-x86_64-unknown-linux-gnu
 mv rust-analyzer-x86_64-unknown-linux-gnu rust-analyzer
-export PATH="$(pwd):$PATH"
+install rust-analyzer /usr/local/bin
+# export PATH="$(pwd):$PATH"
 
 # install pyright
 pip install --break-system-packages pyright
