@@ -21,8 +21,8 @@ cd nvim
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz
 tar -xf nvim-linux-x86_64.tar.gz
 cd nvim-linux-x86_64/bin
-install nvim /usr/local/bin
-#export PATH="$(pwd):$PATH"
+# install nvim /usr/local/bin
+export PATH="$(pwd):$PATH"
 
 
 # Install your editor of choose ;)
@@ -32,8 +32,8 @@ cd helix
 wget https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64-linux.tar.xz
 tar -xf helix-25.01.1-x86_64-linux.tar.xz
 cd helix-25.01.1-x86_64-linux
-install hx /usr/local/bin
-# export PATH="$(pwd):$PATH"
+# install hx /usr/local/bin
+export PATH="$(pwd):$PATH"
 
 # Download and install clangd
 cd
@@ -59,6 +59,15 @@ install rust-analyzer /usr/local/bin
 
 # install pyright
 pip install --break-system-packages pyright
+
+# install ruff (the better python lsp)
+cd
+mkdir ruff
+cd ruff
+wget https://github.com/astral-sh/ruff/releases/download/0.12.2/ruff-i686-unknown-linux-gnu.tar.gz
+cd ruff-i686-unknown-linux-gnu
+install rust-analyzer /usr/local/bin
+
 
 cd
 nvim --headless --listen 0.0.0.0:8888
