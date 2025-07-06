@@ -74,7 +74,7 @@ export PATH="$(pwd):$PATH"
 
 
 # Add to the bachrc
-echo "source $PATH" >> ~/.bashrc
+echo "export PATH=$PATH" >> ~/.bashrc
 
 cd
 # nvim --headless --listen 0.0.0.0:8888
