@@ -4,3 +4,13 @@ theme = "base16_terminal"
 line-number = "relative"
 true-color = true
 
+# Instant completions 
+completion-timeout = 5
+auto-pairs = false
+
+[editor.smart-tab]
+enable = false
+
+
+[editor.soft-wrap]
+enable = true
