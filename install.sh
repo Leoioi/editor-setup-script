@@ -3,8 +3,10 @@
 # Store away where we have copied the git directory
 gitdir="$(pwd)"
 
+install_dir="/home/"
+
 # Go to home and make a config dir
-cd 
+cd $install_dir 
 mkdir -p .config/nvim
 cd .config/nvim
 # Copy the neovim config
@@ -16,7 +18,7 @@ cd ~/.config/helix
 cp $gitdir/config.toml .
 cp $gitdir/languages.toml .
 
-cd
+cd $install_dir 
 mkdir nvim 
 cd nvim 
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz
@@ -27,7 +29,7 @@ export PATH="$(pwd):$PATH"
 
 
 # Install your editor of choose ;)
-cd
+cd $install_dir 
 mkdir helix
 cd helix
 wget https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64-linux.tar.xz
@@ -38,7 +40,7 @@ export PATH="$(pwd):$PATH"
 
 
 # Download and install clangd
-cd
+cd $install_dir 
 mkdir clangd
 cd clangd
 wget https://github.com/clangd/clangd/releases/download/19.1.2/clangd-linux-19.1.2.zip
@@ -49,7 +51,7 @@ chmod +x clangd
 export PATH="$(pwd):$PATH"
 
 # Download and install rust-analyzer
-cd
+cd $install_dir 
 mkdir rust_anl 
 cd rust_anl 
 wget https://github.com/rust-lang/rust-analyzer/releases/download/2025-06-09/rust-analyzer-x86_64-unknown-linux-gnu.gz
@@ -78,5 +80,6 @@ export PATH="$(pwd):$PATH"
 echo "export PATH=$PATH" >> ~/.bashrc
 
 cd
+source .bachrc
 # nvim --headless --listen 0.0.0.0:8888
 sleep infinity
