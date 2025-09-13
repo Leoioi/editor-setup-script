@@ -11,6 +11,9 @@ auto-pairs = false
 [editor.smart-tab]
 enable = false
 
-
 [editor.soft-wrap]
 enable = true
+
+[keys.normal]
+C-r = ":reflow"
+

@@ -14,6 +14,7 @@ cp $gitdir/init.lua .
 mkdir -p ~/.config/helix
 cd ~/.config/helix
 cp $gitdir/config.toml .
+cp $gitdir/languages.toml .
 
 cd
 mkdir nvim 
