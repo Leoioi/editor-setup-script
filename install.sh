@@ -66,7 +66,7 @@ pip install --break-system-packages pyright python-lsp-server
 
 
 # install ruff (the better python lsp)
-cd
+cd $install_dir
 mkdir ruff
 cd ruff
 wget https://github.com/astral-sh/ruff/releases/download/0.12.2/ruff-i686-unknown-linux-gnu.tar.gz
