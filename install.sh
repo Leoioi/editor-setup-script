@@ -12,6 +12,11 @@ cd .config/nvim
 # Copy the neovim config
 cp $gitdir/init.lua .
 
+cd $install_dir 
+mkdir -p .config/vim
+cd .config/vim
+# Copy the vim config
+cp $gitdir/vimrc .
 
 mkdir -p ~/.config/helix
 cd ~/.config/helix
